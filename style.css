@@ -103,6 +103,31 @@ body[data-theme="pink"] {
   --orb-2: linear-gradient(135deg, #ffcade, #fff8fb);
 }
 
+body[data-theme="quiz-ppn-palette"] {
+  --bg-1: #fff3b0;
+  --bg-2: #fff8cf;
+  --bg-3: #f6e2a4;
+  --primary: #e09f3e;
+  --primary-dark: #9e2a2b;
+  --accent: #335c67;
+  --accent-2: #fff3b0;
+  --text: #335c67;
+  --muted: rgba(51, 92, 103, 0.75);
+  --glass: #fff7d6;
+  --glass-strong: #fff0c8;
+  --stroke: rgba(51, 92, 103, 0.25);
+  --option-bg: #fff9de;
+  --option-selected: #ffe7b9;
+  --option-hover: #fff1c9;
+  --option-border: rgba(51, 92, 103, 0.35);
+  --option-border-strong: rgba(51, 92, 103, 0.6);
+  --focus-ring: rgba(224, 159, 62, 0.35);
+  --option-ring: rgba(224, 159, 62, 0.35);
+  --primary-soft: #f0b86a;
+  --orb-1: linear-gradient(135deg, #fff3b0, #e09f3e);
+  --orb-2: linear-gradient(135deg, #ffe2a4, #fff7d2);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
