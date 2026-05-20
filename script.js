@@ -2,7 +2,7 @@ const quizBank = {
   "ppn-kms": {
     title: "PPN atas Kegiatan Membangun Sendiri (KMS)",
     theme: "green",
-    materialUrl: "https://canva.link/46wwzbhld6ekuhu",
+    materialUrl: "https://canva.link/e7hpb3va50ac7wz",
     resultNote:
       "Penjelasan perhitungan soal nomor 2: Rp500.000.000 x 2,2% = Rp11.000.000",
     questions: [
@@ -67,7 +67,7 @@ const quizBank = {
   "konsep-dasar-ppn": {
     title: "Konsep Dasar PPN",
     theme: "orange",
-    materialUrl: "#",
+    materialUrl: "https://canva.link/e7hpb3va50ac7wz",
     questions: [
       {
         question: "Mengapa PPN disebut sebagai pajak tidak langsung?",
@@ -129,7 +129,7 @@ const quizBank = {
   "subjek-objek-ppn": {
     title: "Subjek dan Objek PPN",
     theme: "red",
-    materialUrl: "#",
+    materialUrl: "https://canva.link/e7hpb3va50ac7wz",
     questions: [
       {
         question:
@@ -190,7 +190,7 @@ const quizBank = {
   "tarif-perhitungan-ppn": {
     title: "Tarif dan Perhitungan PPN",
     theme: "purple",
-    materialUrl: "#",
+    materialUrl: "https://canva.link/e7hpb3va50ac7wz",
     questions: [
       {
         question:
@@ -253,8 +253,8 @@ const quizBank = {
   },
   "administrasi-ppn": {
     title: "Administrasi PPN",
-    theme: "blue",
-    materialUrl: "#",
+    theme: "pink",
+    materialUrl: "https://canva.link/e7hpb3va50ac7wz",
     questions: [
       {
         question:

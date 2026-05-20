@@ -88,6 +88,21 @@ body[data-theme="blue"] {
   --orb-2: linear-gradient(135deg, #c9defc, #f8fbff);
 }
 
+body[data-theme="pink"] {
+  --bg-1: #fff1f6;
+  --bg-2: #fffafc;
+  --bg-3: #ffe3ee;
+  --primary: #ff8fb7;
+  --primary-dark: #d9467c;
+  --option-selected: #ffd6e6;
+  --option-hover: #f6ecf2;
+  --focus-ring: rgba(255, 143, 183, 0.35);
+  --option-ring: rgba(255, 143, 183, 0.35);
+  --primary-soft: #ffc0d6;
+  --orb-1: linear-gradient(135deg, #ffd9e8, #fff6fa);
+  --orb-2: linear-gradient(135deg, #ffcade, #fff8fb);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
