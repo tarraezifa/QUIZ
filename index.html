@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Quiz PPN KMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="grid-light"></div>
+  </div>
+
+  <main class="app">
+    <section id="cover" class="screen active" aria-labelledby="cover-title">
+      <div class="glass card cover-card">
+        <div class="cover-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img" aria-label="Ikon pajak" class="icon-svg">
+            <rect x="10" y="8" width="36" height="48" rx="6" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M22 18h20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M22 26h20" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <path d="M22 34h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <rect x="44" y="24" width="12" height="20" rx="4" fill="none" stroke="currentColor" stroke-width="2" />
+            <path d="M50 28v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </div>
+        <p class="eyebrow">Mini Quiz</p>
+        <h1 id="cover-title">PPN atas Kegiatan Membangun Sendiri (KMS)</h1>
+        <p class="subtitle">Uji pemahamanmu tentang PPN KMS lewat mini quiz.</p>
+        <form id="identityForm" class="identity-form">
+          <label class="field">
+            <span class="field-label">Nama</span>
+            <input id="nameInput" name="nama" type="text" placeholder="Nama lengkap" autocomplete="name" required />
+          </label>
+          <label class="field">
+            <span class="field-label">NIM</span>
+            <input id="nimInput" name="nim" type="text" placeholder="Masukkan NIM" autocomplete="off" required />
+          </label>
+          <p id="startError" class="form-error" role="alert"></p>
+          <button id="startBtn" class="btn btn-primary" type="submit">Mulai Quiz</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="quiz" class="screen" aria-live="polite">
+      <div class="quiz-header">
+        <div class="progress-info">
+          <span id="progressText" class="progress-text">Soal 1 dari 3</span>
+          <div class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1">
+            <span id="progressFill" class="progress-fill"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass card quiz-card">
+        <div class="question-meta">
+          <span class="badge">Pertanyaan</span>
+          <h2 id="questionTitle">Soal 1</h2>
+        </div>
+        <p id="questionText" class="question-text"></p>
+        <div id="options" class="options-grid" role="list"></div>
+      </div>
+
+    </section>
+
+    <section id="result" class="screen" aria-labelledby="result-title">
+      <div class="glass card result-card">
+        <div class="result-header">
+          <div class="result-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" class="icon-svg">
+              <circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="2" />
+              <path d="M20 34l8 8 16-18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h2 id="result-title">Kunci Jawaban & Penilaian</h2>
+        </div>
+
+        <div class="score-grid">
+          <div class="score-item">
+            <p class="score-label">Skor</p>
+            <p id="scoreValue" class="score-value">0</p>
+          </div>
+          <div class="score-item">
+            <p class="score-label">Jawaban Benar</p>
+            <p id="correctCount" class="score-value">0 dari 3</p>
+          </div>
+        </div>
+
+        <div class="answer-key">
+          <h3>Kunci Jawaban</h3>
+          <ol>
+            <li>C — Kegiatan membangun/menambah bangunan sendiri untuk digunakan pribadi atau pihak lain</li>
+            <li>B — Rp11.000.000</li>
+            <li>C — PPN terutang setiap masa pajak berdasarkan biaya yang dikeluarkan dan disetor paling lambat tanggal 15 bulan berikutnya</li>
+          </ol>
+          <p class="calc-note">Penjelasan perhitungan soal nomor 2: Rp500.000.000 x 2,2% = Rp11.000.000</p>
+        </div>
+
+        <div class="result-actions">
+          <a id="backMaterial" class="btn btn-ghost" href="https://canva.link/46wwzbhld6ekuhu" target="_blank" rel="noopener">Kembali ke Materi</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="feedbackModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="glass modal-card">
+      <div id="modalIcon" class="modal-icon" aria-hidden="true"></div>
+      <h3 id="modalTitle" class="modal-title"></h3>
+      <p id="modalText" class="modal-text"></p>
+      <div class="modal-actions">
+        <button id="modalClose" class="btn btn-ghost">Selanjutnya</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
