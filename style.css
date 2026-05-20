@@ -58,6 +58,21 @@ body[data-theme="red"] {
   --orb-2: linear-gradient(135deg, #ffd1c7, #fff7f3);
 }
 
+body[data-theme="purple"] {
+  --bg-1: #f5eefc;
+  --bg-2: #fbf7ff;
+  --bg-3: #e9defa;
+  --primary: #b58ae6;
+  --primary-dark: #7b4acb;
+  --option-selected: #eee0fb;
+  --option-hover: #f3edf9;
+  --focus-ring: rgba(181, 138, 230, 0.35);
+  --option-ring: rgba(181, 138, 230, 0.35);
+  --primary-soft: #caa7f0;
+  --orb-1: linear-gradient(135deg, #ead8fb, #faf4ff);
+  --orb-2: linear-gradient(135deg, #dbc6f5, #fdf7ff);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

@@ -187,6 +187,70 @@ const quizBank = {
       },
     ],
   },
+  "tarif-perhitungan-ppn": {
+    title: "Tarif dan Perhitungan PPN",
+    theme: "purple",
+    materialUrl: "#",
+    questions: [
+      {
+        question:
+          "Apa yang dimaksud dengan Pajak Masukan dalam sistem Pajak Pertambahan Nilai (PPN)?",
+        choices: [
+          "Pajak yang dipungut oleh PKP saat menyerahkan BKP atau JKP",
+          "Pajak yang dikenakan atas penghasilan tahunan wajib pajak",
+          "Pajak yang dibayar oleh PKP saat memperoleh BKP/JKP",
+          "Pajak dikenakan atas barang yang melintasi batas negara",
+        ],
+        correctIndex: 2,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Pajak Masukan adalah pajak yang dibayar oleh PKP saat memperoleh BKP atau JKP.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText:
+            "Jawaban yang benar adalah C. Pajak yang dibayar oleh PKP saat memperoleh BKP/JKP.",
+        },
+      },
+      {
+        question:
+          "Bagaimana faktur Pajak Masukan yang secara hukum perpajakan memenuhi syarat formal dan material sehingga dapat dikreditkan oleh PKP?",
+        choices: [
+          "Faktur Pajak yang mencantumkan nama, alamat, dan NPWP pembeli dengan lengkap dan benar atas kegiatan usaha",
+          "Faktur Pajak yang terbit sebelum berstatus Pengusaha Kena Pajak",
+          "Faktur Pajak yang ditemukan setelah melewati batas waktu selama 3 bulan",
+          "Faktur Pajak atas perolehan BKP untuk menghasilkan barang bebas pengenaan PPN",
+        ],
+        correctIndex: 0,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Faktur Pajak Masukan dapat dikreditkan apabila memenuhi syarat formal dan material, termasuk mencantumkan nama, alamat, dan NPWP pembeli dengan lengkap dan benar atas kegiatan usaha.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText:
+            "Jawaban yang benar adalah A. Faktur Pajak yang mencantumkan nama, alamat, dan NPWP pembeli dengan lengkap dan benar atas kegiatan usaha.",
+        },
+      },
+      {
+        question:
+          "PT Jasa Utama berstatus Pengusaha Kena Pajak (PKP) yang memperoleh peredaran bruto dari penyerahan Jasa Kena Pajak sebesar Rp 300.000.000. Berapa jumlah Pajak Masukan yang harus disetor ke kas negara?",
+        choices: [
+          "Rp 6.600.000",
+          "Rp 8.800.000",
+          "Rp 11.000.000",
+          "Rp 13.200.000",
+        ],
+        correctIndex: 3,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Jumlah yang harus disetor adalah Rp 13.200.000. Perhitungan: 40% x 11% x Rp 300.000.000 = Rp 13.200.000.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText:
+            "Jawaban yang benar adalah D. Rp 13.200.000. Perhitungan: 40% x 11% x Rp 300.000.000 = Rp 13.200.000.",
+        },
+      },
+    ],
+  },
 };
 
 const screens = {
