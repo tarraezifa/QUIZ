@@ -470,7 +470,7 @@ identityForm.addEventListener("submit", async (event) => {
     const exists = await checkNimExists(nim);
     if (exists) {
       setStartError(
-        "Kamu sudah pernah mengerjakan quiz materi ini. Hasil pertama sudah tersimpan."
+        "Kamu sudah pernah mengerjakan quiz materi ini."
       );
       return;
     }
