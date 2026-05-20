@@ -6,9 +6,9 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const { nim } = req.body || {};
-  if (!nim || typeof nim !== "string") {
-    res.status(400).json({ error: "NIM wajib diisi." });
+  const { nim, materi_slug: materiSlug } = req.body || {};
+  if (!nim || typeof nim !== "string" || !materiSlug || typeof materiSlug !== "string") {
+    res.status(400).json({ error: "NIM dan materi wajib diisi." });
     return;
   }
 
@@ -27,6 +27,7 @@ module.exports = async (req, res) => {
     .from("submissions")
     .select("id")
     .eq("nim", nim)
+    .eq("materi_slug", materiSlug)
     .limit(1)
     .maybeSingle();
 

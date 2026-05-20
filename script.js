@@ -1,61 +1,132 @@
-const questions = [
-  {
-    question:
-      "Manakah yang termasuk pengertian Kegiatan Membangun Sendiri (KMS) yang benar?",
-    choices: [
-      "Kegiatan membangun bangunan oleh kontraktor PKP",
-      "Kegiatan membeli rumah jadi dari developer",
-      "Kegiatan membangun/menambah bangunan sendiri untuk digunakan pribadi atau pihak lain",
-      "Kegiatan renovasi kecil tanpa biaya",
+const quizBank = {
+  "ppn-kms": {
+    title: "PPN atas Kegiatan Membangun Sendiri (KMS)",
+    theme: "green",
+    materialUrl: "https://canva.link/46wwzbhld6ekuhu",
+    resultNote:
+      "Penjelasan perhitungan soal nomor 2: Rp500.000.000 x 2,2% = Rp11.000.000",
+    questions: [
+      {
+        question:
+          "Manakah yang termasuk pengertian Kegiatan Membangun Sendiri (KMS) yang benar?",
+        choices: [
+          "Kegiatan membangun bangunan oleh kontraktor PKP",
+          "Kegiatan membeli rumah jadi dari developer",
+          "Kegiatan membangun/menambah bangunan sendiri untuk digunakan pribadi atau pihak lain",
+          "Kegiatan renovasi kecil tanpa biaya",
+        ],
+        correctIndex: 2,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Kegiatan Membangun Sendiri (KMS) adalah kegiatan membangun atau menambah bangunan sendiri untuk digunakan pribadi atau pihak lain.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText:
+            "Jawaban yang benar adalah C. Kegiatan membangun/menambah bangunan sendiri untuk digunakan pribadi atau pihak lain.",
+        },
+      },
+      {
+        question:
+          "Sebuah rumah dibangun dengan biaya Rp500.000.000, tidak termasuk tanah. Tarif efektif PPN KMS adalah 2,2%. Berapa PPN KMS yang terutang?",
+        choices: [
+          "Rp5.000.000",
+          "Rp11.000.000",
+          "Rp17.600.000",
+          "Rp22.000.000",
+        ],
+        correctIndex: 1,
+        feedback: {
+          correctTitle: "Benar! Hebat!",
+          correctText:
+            "PPN KMS yang terutang adalah Rp11.000.000. Perhitungan: Rp500.000.000 x 2,2% = Rp11.000.000.",
+          wrongTitle: "Yah, masih salah.",
+          wrongText:
+            "Jawaban yang benar adalah B. Rp11.000.000. Perhitungan: Rp500.000.000 x 2,2% = Rp11.000.000.",
+        },
+      },
+      {
+        question: "Pernyataan yang benar mengenai PPN KMS adalah...",
+        choices: [
+          "PPN dibayar setelah bangunan selesai",
+          "PPN hanya dihitung sekali di akhir pembangunan",
+          "PPN terutang setiap masa pajak berdasarkan biaya yang dikeluarkan dan disetor paling lambat tanggal 15 bulan berikutnya",
+          "PPN KMS tidak perlu dilaporkan jika pembangunan belum selesai",
+        ],
+        correctIndex: 2,
+        feedback: {
+          correctTitle: "Keren, jawabanmu benar!",
+          correctText:
+            "Pernyataan yang benar adalah PPN KMS terutang setiap masa pajak berdasarkan biaya yang dikeluarkan dan disetor paling lambat tanggal 15 bulan berikutnya.",
+          wrongTitle: "Belum tepat, coba lagi ya!",
+          wrongText:
+            "Jawaban yang benar adalah C. PPN terutang setiap masa pajak berdasarkan biaya yang dikeluarkan dan disetor paling lambat tanggal 15 bulan berikutnya.",
+        },
+      },
     ],
-    correctIndex: 2,
-    feedback: {
-      correctTitle: "Benar!",
-      correctText:
-        "Kegiatan Membangun Sendiri (KMS) adalah kegiatan membangun atau menambah bangunan sendiri untuk digunakan pribadi atau pihak lain.",
-      wrongTitle: "Ups, jawabanmu belum tepat.",
-      wrongText:
-        "Jawaban yang benar adalah C. Kegiatan membangun/menambah bangunan sendiri untuk digunakan pribadi atau pihak lain.",
-    },
   },
-  {
-    question:
-      "Sebuah rumah dibangun dengan biaya Rp500.000.000, tidak termasuk tanah. Tarif efektif PPN KMS adalah 2,2%. Berapa PPN KMS yang terutang?",
-    choices: [
-      "Rp5.000.000",
-      "Rp11.000.000",
-      "Rp17.600.000",
-      "Rp22.000.000",
+  "konsep-dasar-ppn": {
+    title: "Konsep Dasar PPN",
+    theme: "orange",
+    materialUrl: "#",
+    questions: [
+      {
+        question: "Mengapa PPN disebut sebagai pajak tidak langsung?",
+        choices: [
+          "Karena dibayar langsung oleh pemerintah",
+          "Karena beban pajaknya ditanggung konsumen, tetapi dipungut dan disetor oleh PKP",
+          "Karena hanya dikenakan kepada perusahaan besar",
+          "Karena tidak menggunakan faktur pajak",
+        ],
+        correctIndex: 1,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "PPN disebut pajak tidak langsung karena beban pajaknya ditanggung konsumen, tetapi dipungut dan disetor oleh PKP.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText:
+            "Jawaban yang benar adalah B. Karena beban pajaknya ditanggung konsumen, tetapi dipungut dan disetor oleh PKP.",
+        },
+      },
+      {
+        question: "Apa yang dimaksud dengan Pajak Masukan dalam PPN?",
+        choices: [
+          "PPN yang dipungut PKP saat menjual BKP atau JKP",
+          "PPN yang dibayar PKP saat membeli BKP atau JKP",
+          "Nilai dasar untuk menghitung PPN",
+          "Bukti pemungutan PPN",
+        ],
+        correctIndex: 1,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Pajak Masukan adalah PPN yang dibayar PKP saat membeli BKP atau JKP.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText:
+            "Jawaban yang benar adalah B. PPN yang dibayar PKP saat membeli BKP atau JKP.",
+        },
+      },
+      {
+        question:
+          "Salah satu karakteristik PPN adalah tidak menimbulkan pajak berganda. Hal ini terjadi karena...",
+        choices: [
+          "PPN hanya dikenakan kepada konsumen tertentu",
+          "PPN hanya dikenakan satu kali di awal produksi",
+          "PPN menggunakan mekanisme Pajak Keluaran dikurangi Pajak Masukan",
+          "PPN tidak wajib dilaporkan oleh PKP",
+        ],
+        correctIndex: 2,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "PPN tidak menimbulkan pajak berganda karena menggunakan mekanisme Pajak Keluaran dikurangi Pajak Masukan.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText:
+            "Jawaban yang benar adalah C. PPN menggunakan mekanisme Pajak Keluaran dikurangi Pajak Masukan.",
+        },
+      },
     ],
-    correctIndex: 1,
-    feedback: {
-      correctTitle: "Benar! Hebat!",
-      correctText:
-        "PPN KMS yang terutang adalah Rp11.000.000. Perhitungan: Rp500.000.000 x 2,2% = Rp11.000.000.",
-      wrongTitle: "Yah, masih salah.",
-      wrongText:
-        "Jawaban yang benar adalah B. Rp11.000.000. Perhitungan: Rp500.000.000 x 2,2% = Rp11.000.000.",
-    },
   },
-  {
-    question: "Pernyataan yang benar mengenai PPN KMS adalah...",
-    choices: [
-      "PPN dibayar setelah bangunan selesai",
-      "PPN hanya dihitung sekali di akhir pembangunan",
-      "PPN terutang setiap masa pajak berdasarkan biaya yang dikeluarkan dan disetor paling lambat tanggal 15 bulan berikutnya",
-      "PPN KMS tidak perlu dilaporkan jika pembangunan belum selesai",
-    ],
-    correctIndex: 2,
-    feedback: {
-      correctTitle: "Keren, jawabanmu benar!",
-      correctText:
-        "Pernyataan yang benar adalah PPN KMS terutang setiap masa pajak berdasarkan biaya yang dikeluarkan dan disetor paling lambat tanggal 15 bulan berikutnya.",
-      wrongTitle: "Belum tepat, coba lagi ya!",
-      wrongText:
-        "Jawaban yang benar adalah C. PPN terutang setiap masa pajak berdasarkan biaya yang dikeluarkan dan disetor paling lambat tanggal 15 bulan berikutnya.",
-    },
-  },
-];
+};
 
 const screens = {
   cover: document.getElementById("cover"),
@@ -68,6 +139,11 @@ const identityForm = document.getElementById("identityForm");
 const nameInput = document.getElementById("nameInput");
 const nimInput = document.getElementById("nimInput");
 const startError = document.getElementById("startError");
+const coverTitle = document.getElementById("cover-title");
+const coverSubtitle = document.getElementById("coverSubtitle");
+const answerKeyList = document.getElementById("answerKeyList");
+const calcNote = document.getElementById("calcNote");
+const backMaterial = document.getElementById("backMaterial");
 
 const questionTitle = document.getElementById("questionTitle");
 const questionText = document.getElementById("questionText");
@@ -87,6 +163,10 @@ const scoreValue = document.getElementById("scoreValue");
 const correctCount = document.getElementById("correctCount");
 
 const letters = ["A", "B", "C", "D"];
+const params = new URLSearchParams(window.location.search);
+const materiSlug = params.get("materi") || "ppn-kms";
+const currentQuiz = quizBank[materiSlug];
+const questions = currentQuiz ? currentQuiz.questions : [];
 let currentIndex = 0;
 let answers = new Array(questions.length).fill(null);
 let participant = { nama: "", nim: "" };
@@ -120,11 +200,62 @@ function setStartLoading(isLoading) {
   startBtn.textContent = isLoading ? "Memeriksa..." : "Mulai Quiz";
 }
 
+function disableIdentityForm() {
+  [nameInput, nimInput, startBtn].forEach((el) => {
+    if (el) {
+      el.disabled = true;
+    }
+  });
+}
+
+function applyQuizMeta() {
+  if (!currentQuiz) {
+    coverTitle.textContent = "Materi tidak ditemukan";
+    coverSubtitle.textContent = "Silakan cek kembali link materi yang digunakan.";
+    setStartError("Materi tidak ditemukan.");
+    disableIdentityForm();
+    return false;
+  }
+
+  document.body.dataset.theme = currentQuiz.theme || "green";
+  document.title = `Mini Quiz ${currentQuiz.title}`;
+  coverTitle.textContent = currentQuiz.title;
+  coverSubtitle.textContent = `Uji pemahamanmu tentang ${currentQuiz.title} lewat mini quiz.`;
+  backMaterial.href = currentQuiz.materialUrl || "#";
+  if (currentQuiz.materialUrl && currentQuiz.materialUrl !== "#") {
+    backMaterial.target = "_blank";
+    backMaterial.rel = "noopener";
+  } else {
+    backMaterial.removeAttribute("target");
+    backMaterial.removeAttribute("rel");
+  }
+  progressBar.setAttribute("aria-valuemax", String(questions.length));
+  return true;
+}
+
+function renderAnswerKey() {
+  answerKeyList.innerHTML = "";
+  questions.forEach((item) => {
+    const li = document.createElement("li");
+    const letter = letters[item.correctIndex];
+    li.textContent = `${letter} — ${item.choices[item.correctIndex]}`;
+    answerKeyList.appendChild(li);
+  });
+
+  if (currentQuiz && currentQuiz.resultNote) {
+    calcNote.textContent = currentQuiz.resultNote;
+    calcNote.hidden = false;
+  } else {
+    calcNote.textContent = "";
+    calcNote.hidden = true;
+  }
+}
+
 async function checkNimExists(nim) {
   const response = await fetch("/api/check-nim", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ nim }),
+    body: JSON.stringify({ nim, materi_slug: materiSlug }),
   });
   const data = await response.json();
   if (!response.ok) {
@@ -140,6 +271,8 @@ async function submitResults() {
     body: JSON.stringify({
       nama: participant.nama,
       nim: participant.nim,
+      materi_slug: materiSlug,
+      materi_title: currentQuiz.title,
       answers,
     }),
   });
@@ -151,6 +284,9 @@ async function submitResults() {
 }
 
 function updateProgress() {
+  if (!questions.length) {
+    return;
+  }
   const total = questions.length;
   const current = currentIndex + 1;
   progressText.textContent = `Soal ${current} dari ${total}`;
@@ -159,6 +295,9 @@ function updateProgress() {
 }
 
 function renderQuestion() {
+  if (!questions.length) {
+    return;
+  }
   const current = questions[currentIndex];
   questionTitle.textContent = `Soal ${currentIndex + 1}`;
   questionText.textContent = current.question;
@@ -223,6 +362,7 @@ function advanceFromModal() {
 }
 
 function showResults() {
+  renderAnswerKey();
   showScreen("result");
 
   scoreValue.textContent = "Menghitung...";
@@ -250,6 +390,10 @@ function nextQuestion() {
 
 identityForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+  if (!currentQuiz) {
+    setStartError("Materi tidak ditemukan.");
+    return;
+  }
   const nama = nameInput.value.trim();
   const nim = nimInput.value.trim();
 
@@ -265,7 +409,7 @@ identityForm.addEventListener("submit", async (event) => {
     const exists = await checkNimExists(nim);
     if (exists) {
       setStartError(
-        "Kamu sudah pernah mengerjakan quiz ini. Hasil pertama sudah tersimpan."
+        "Kamu sudah pernah mengerjakan quiz materi ini. Hasil pertama sudah tersimpan."
       );
       return;
     }
@@ -276,10 +420,10 @@ identityForm.addEventListener("submit", async (event) => {
     renderQuestion();
     showScreen("quiz");
   } catch (error) {
-  console.error("Error cek NIM:", error);
-  setStartError(error.message || "Tidak dapat memproses NIM. Coba lagi.");
+    console.error("Error cek NIM:", error);
+    setStartError(error.message || "Tidak dapat memproses NIM. Coba lagi.");
   } finally {
-  setStartLoading(false);
+    setStartLoading(false);
   }
 });
 
@@ -291,4 +435,7 @@ modal.addEventListener("click", (event) => {
   }
 });
 
-renderQuestion();
+const isQuizReady = applyQuizMeta();
+if (isQuizReady) {
+  renderQuestion();
+}

@@ -1,6 +1,9 @@
 const { createClient } = require("@supabase/supabase-js");
 
-const correctAnswers = [2, 1, 2];
+const answerKeys = {
+  "ppn-kms": [2, 1, 2],
+  "konsep-dasar-ppn": [1, 1, 2],
+};
 
 module.exports = async (req, res) => {
   if (req.method !== "POST") {
@@ -8,9 +11,16 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const { nama, nim, answers } = req.body || {};
-  if (!nama || !nim || !Array.isArray(answers)) {
+  const { nama, nim, materi_slug: materiSlug, materi_title: materiTitle, answers } =
+    req.body || {};
+  if (!nama || !nim || !materiSlug || !materiTitle || !Array.isArray(answers)) {
     res.status(400).json({ error: "Data tidak lengkap." });
+    return;
+  }
+
+  const correctAnswers = answerKeys[materiSlug];
+  if (!correctAnswers) {
+    res.status(400).json({ error: "Materi tidak dikenali." });
     return;
   }
 
@@ -48,6 +58,8 @@ module.exports = async (req, res) => {
   const { error } = await supabase.from("submissions").insert({
     nama,
     nim,
+    materi_slug: materiSlug,
+    materi_title: materiTitle,
     answers: normalizedAnswers,
     correct_count: correctCount,
     score,
@@ -55,7 +67,9 @@ module.exports = async (req, res) => {
 
   if (error) {
     if (error.code === "23505") {
-      res.status(409).json({ error: "NIM sudah pernah digunakan." });
+      res
+        .status(409)
+        .json({ error: "NIM sudah pernah digunakan untuk materi ini." });
       return;
     }
     res.status(500).json({ error: "Gagal menyimpan data." });

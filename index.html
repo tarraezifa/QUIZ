@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mini Quiz PPN KMS</title>
+  <title>Mini Quiz Perpajakan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -30,8 +30,8 @@
           </svg>
         </div>
         <p class="eyebrow">Mini Quiz</p>
-        <h1 id="cover-title">PPN atas Kegiatan Membangun Sendiri (KMS)</h1>
-        <p class="subtitle">Uji pemahamanmu tentang PPN KMS lewat mini quiz.</p>
+        <h1 id="cover-title">Judul Materi</h1>
+        <p id="coverSubtitle" class="subtitle">Uji pemahamanmu lewat mini quiz.</p>
         <form id="identityForm" class="identity-form">
           <label class="field">
             <span class="field-label">Nama</span>
@@ -93,16 +93,12 @@
 
         <div class="answer-key">
           <h3>Kunci Jawaban</h3>
-          <ol>
-            <li>C — Kegiatan membangun/menambah bangunan sendiri untuk digunakan pribadi atau pihak lain</li>
-            <li>B — Rp11.000.000</li>
-            <li>C — PPN terutang setiap masa pajak berdasarkan biaya yang dikeluarkan dan disetor paling lambat tanggal 15 bulan berikutnya</li>
-          </ol>
-          <p class="calc-note">Penjelasan perhitungan soal nomor 2: Rp500.000.000 x 2,2% = Rp11.000.000</p>
+          <ol id="answerKeyList"></ol>
+          <p id="calcNote" class="calc-note" hidden></p>
         </div>
 
         <div class="result-actions">
-          <a id="backMaterial" class="btn btn-ghost" href="https://canva.link/46wwzbhld6ekuhu" target="_blank" rel="noopener">Kembali ke Materi</a>
+          <a id="backMaterial" class="btn btn-ghost" href="#">Kembali ke Materi</a>
         </div>
       </div>
     </section>

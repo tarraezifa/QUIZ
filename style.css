@@ -19,8 +19,28 @@
   --option-wrong: #ffe2d7;
   --option-border: rgba(17, 17, 17, 0.3);
   --option-border-strong: rgba(17, 17, 17, 0.6);
+  --focus-ring: rgba(184, 242, 106, 0.35);
+  --option-ring: rgba(184, 242, 106, 0.4);
+  --primary-soft: #d3f78a;
+  --orb-1: linear-gradient(135deg, #dff8a7, #f7f1e8);
+  --orb-2: linear-gradient(135deg, #f0e6cf, #fdfbf7);
   --radius-lg: 20px;
   --radius-md: 12px;
+}
+
+body[data-theme="orange"] {
+  --bg-1: #fff1df;
+  --bg-2: #fff9f1;
+  --bg-3: #ffe6c7;
+  --primary: #f4a132;
+  --primary-dark: #d47f0f;
+  --option-selected: #ffe3c2;
+  --option-hover: #f6ebde;
+  --focus-ring: rgba(244, 161, 50, 0.35);
+  --option-ring: rgba(244, 161, 50, 0.35);
+  --primary-soft: #f8c07a;
+  --orb-1: linear-gradient(135deg, #ffe1b2, #fff3e3);
+  --orb-2: linear-gradient(135deg, #ffd1a6, #fff7ed);
 }
 
 * {
@@ -67,7 +87,7 @@ h3 {
 .orb-1 {
   width: 280px;
   height: 280px;
-  background: linear-gradient(135deg, #dff8a7, #f7f1e8);
+  background: var(--orb-1);
   top: -60px;
   left: -40px;
   transform: rotate(-6deg);
@@ -76,7 +96,7 @@ h3 {
 .orb-2 {
   width: 320px;
   height: 320px;
-  background: linear-gradient(135deg, #f0e6cf, #fdfbf7);
+  background: var(--orb-2);
   bottom: -80px;
   right: -60px;
   animation-delay: -6s;
@@ -201,7 +221,7 @@ h3 {
 
 .field input:focus {
   border-color: rgba(17, 17, 17, 0.65);
-  box-shadow: 0 0 0 3px rgba(184, 242, 106, 0.35);
+  box-shadow: 0 0 0 3px var(--focus-ring);
 }
 
 .form-error {
@@ -282,7 +302,7 @@ h3 {
   display: block;
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, var(--primary), #d3f78a);
+  background: linear-gradient(90deg, var(--primary), var(--primary-soft));
   transition: width 0.3s ease;
 }
 
@@ -352,7 +372,7 @@ h3 {
 .option.selected {
   background: var(--option-selected);
   border-color: var(--option-border-strong);
-  box-shadow: 0 0 0 3px rgba(184, 242, 106, 0.4);
+  box-shadow: 0 0 0 3px var(--option-ring);
 }
 
 .option.correct {
