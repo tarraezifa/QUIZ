@@ -276,9 +276,10 @@ identityForm.addEventListener("submit", async (event) => {
     renderQuestion();
     showScreen("quiz");
   } catch (error) {
-    setStartError("Tidak dapat memproses NIM. Coba lagi.");
+  console.error("Error cek NIM:", error);
+  setStartError(error.message || "Tidak dapat memproses NIM. Coba lagi.");
   } finally {
-    setStartLoading(false);
+  setStartLoading(false);
   }
 });
 
