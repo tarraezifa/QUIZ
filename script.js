@@ -311,7 +311,7 @@ const quizBank = {
   },
   "quiz-ppn": {
     title: "QUIZ PPN",
-    theme: "quiz-ppn-palette",
+    theme: "retro-pop",
     materialUrl: "https://canva.link/e7hpb3va50ac7wz",
     questions: [
       {
