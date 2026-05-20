@@ -126,6 +126,67 @@ const quizBank = {
       },
     ],
   },
+  "subjek-objek-ppn": {
+    title: "Subjek dan Objek PPN",
+    theme: "red",
+    materialUrl: "#",
+    questions: [
+      {
+        question:
+          "Dalam PPN, pihak yang memiliki kewajiban untuk memungut, menyetor, dan melaporkan PPN kepada negara adalah...",
+        choices: [
+          "Konsumen akhir",
+          "Pengusaha Kena Pajak",
+          "Pembeli barang biasa",
+          "Pemerintah daerah",
+        ],
+        correctIndex: 1,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Dalam PPN, pihak yang memiliki kewajiban untuk memungut, menyetor, dan melaporkan PPN kepada negara adalah Pengusaha Kena Pajak atau PKP.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText: "Jawaban yang benar adalah B. Pengusaha Kena Pajak.",
+        },
+      },
+      {
+        question: "Penyerahan JKP dapat dikenakan PPN apabila...",
+        choices: [
+          "Dilakukan di luar negeri",
+          "Tidak ada pembayaran",
+          "Jasa dilakukan di dalam Daerah Pabean dan dalam kegiatan usaha",
+          "Dilakukan oleh orang pribadi tanpa usaha",
+        ],
+        correctIndex: 2,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Penyerahan JKP dapat dikenakan PPN apabila jasa dilakukan di dalam Daerah Pabean dan dalam kegiatan usaha.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText:
+            "Jawaban yang benar adalah C. Jasa dilakukan di dalam Daerah Pabean dan dalam kegiatan usaha.",
+        },
+      },
+      {
+        question:
+          "Berdasarkan Peraturan Pemerintah No. 49 Tahun 2022, manakah kebutuhan pokok dari barang kena pajak strategis yang tidak dikenakan PPN?",
+        choices: [
+          "Beras, gabah, dan jagung",
+          "Emas batangan dan surat berharga",
+          "Makanan dan minuman yang disajikan di restoran",
+          "Mobil dan kendaraan bermotor",
+        ],
+        correctIndex: 0,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Beras, gabah, dan jagung termasuk kebutuhan pokok dari barang kena pajak strategis yang tidak dikenakan PPN.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText: "Jawaban yang benar adalah A. Beras, gabah, dan jagung.",
+        },
+      },
+    ],
+  },
 };
 
 const screens = {

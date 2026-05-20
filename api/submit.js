@@ -3,6 +3,7 @@ const { createClient } = require("@supabase/supabase-js");
 const answerKeys = {
   "ppn-kms": [2, 1, 2],
   "konsep-dasar-ppn": [1, 1, 2],
+  "subjek-objek-ppn": [1, 2, 0],
 };
 
 module.exports = async (req, res) => {
