@@ -5,6 +5,7 @@ const answerKeys = {
   "konsep-dasar-ppn": [1, 1, 2],
   "subjek-objek-ppn": [1, 2, 0],
   "tarif-perhitungan-ppn": [2, 0, 3],
+  "administrasi-ppn": [1, 3, 1],
 };
 
 module.exports = async (req, res) => {

@@ -251,6 +251,64 @@ const quizBank = {
       },
     ],
   },
+  "administrasi-ppn": {
+    title: "Administrasi PPN",
+    theme: "blue",
+    materialUrl: "#",
+    questions: [
+      {
+        question:
+          "Apa yang dilaporkan pada Lampiran B2 mengenai daftar Pajak Masukan yang dapat dikreditkan atas perolehan BKP/JKP dalam Negeri?",
+        choices: [
+          "Nota Retur atas pengembalian Barang Kena Pajak",
+          "Faktur Pajak yang diterima dari pemasok lokal atas pembelian mesin pabrik dalam lini produksi",
+          "Kuitansi pembelian ATK toko dari pedagang eceran non-PKP",
+          "Pemberitahuan Impor Barang (PIB) atas pembelian bahan baku dari luar negeri",
+          "Faktur Pajak Masukan yang sudah melewati batas waktu pengkreditan",
+        ],
+        correctIndex: 1,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Yang dilaporkan pada Lampiran B2 adalah Faktur Pajak yang diterima dari pemasok lokal atas pembelian mesin pabrik dalam lini produksi, karena termasuk Pajak Masukan yang dapat dikreditkan atas perolehan BKP/JKP dalam negeri.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText:
+            "Jawaban yang benar adalah B. Faktur Pajak yang diterima dari pemasok lokal atas pembelian mesin pabrik dalam lini produksi.",
+        },
+      },
+      {
+        question: "Menurut PMK terbaru tahun 2026, batas restitusi dipercepat adalah ...",
+        choices: ["Rp500 juta", "Rp5 miliar", "Rp2 miliar", "Rp1 miliar"],
+        correctIndex: 3,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Menurut PMK terbaru tahun 2026, batas restitusi dipercepat adalah Rp1 miliar.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText: "Jawaban yang benar adalah D. Rp1 miliar.",
+        },
+      },
+      {
+        question:
+          "Apa perbedaan utama antara kompensasi dan restitusi Pajak Pertambahan Nilai (PPN)?",
+        choices: [
+          "Kompensasi diberikan kepada konsumen, sedangkan restitusi diberikan kepada pemerintah",
+          "Kompensasi digunakan untuk mengurangi pajak terutang pada masa pajak berikutnya, sedangkan restitusi merupakan pengembalian kelebihan pembayaran pajak kepada PKP",
+          "Kompensasi harus melalui pemeriksaan panjang, sedangkan restitusi tidak perlu diajukan",
+          "Kompensasi hanya berlaku untuk Pajak Keluaran, sedangkan restitusi hanya berlaku untuk Pajak Masukan",
+        ],
+        correctIndex: 1,
+        feedback: {
+          correctTitle: "Benar!",
+          correctText:
+            "Kompensasi digunakan untuk mengurangi pajak terutang pada masa pajak berikutnya, sedangkan restitusi merupakan pengembalian kelebihan pembayaran pajak kepada PKP.",
+          wrongTitle: "Ups, jawabanmu belum tepat.",
+          wrongText:
+            "Jawaban yang benar adalah B. Kompensasi digunakan untuk mengurangi pajak terutang pada masa pajak berikutnya, sedangkan restitusi merupakan pengembalian kelebihan pembayaran pajak kepada PKP.",
+        },
+      },
+    ],
+  },
 };
 
 const screens = {
@@ -287,7 +345,7 @@ const modalClose = document.getElementById("modalClose");
 const scoreValue = document.getElementById("scoreValue");
 const correctCount = document.getElementById("correctCount");
 
-const letters = ["A", "B", "C", "D"];
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const params = new URLSearchParams(window.location.search);
 const materiSlug = params.get("materi") || "ppn-kms";
 const currentQuiz = quizBank[materiSlug];
@@ -323,6 +381,10 @@ function setStartError(message) {
 function setStartLoading(isLoading) {
   startBtn.disabled = isLoading;
   startBtn.textContent = isLoading ? "Memeriksa..." : "Mulai Quiz";
+}
+
+function getChoiceLabel(index) {
+  return letters[index] || String.fromCharCode(65 + index);
 }
 
 function disableIdentityForm() {
@@ -362,7 +424,7 @@ function renderAnswerKey() {
   answerKeyList.innerHTML = "";
   questions.forEach((item) => {
     const li = document.createElement("li");
-    const letter = letters[item.correctIndex];
+    const letter = getChoiceLabel(item.correctIndex);
     li.textContent = `${letter} — ${item.choices[item.correctIndex]}`;
     answerKeyList.appendChild(li);
   });
@@ -429,13 +491,14 @@ function renderQuestion() {
 
   optionsEl.innerHTML = "";
   current.choices.forEach((choice, index) => {
+    const label = getChoiceLabel(index);
     const button = document.createElement("button");
     button.type = "button";
     button.className = "option";
     button.dataset.index = String(index);
-    button.dataset.choice = letters[index];
+    button.dataset.choice = label;
     button.innerHTML = `
-      <span class="option-letter">${letters[index]}</span>
+      <span class="option-letter">${label}</span>
       <span class="option-text">${choice}</span>
     `;
     button.setAttribute(
